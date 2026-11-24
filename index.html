@@ -57,12 +57,14 @@
 <div id="bar">
   <div class="lab">On the poster</div>
   <button data-run="balanced" class="on">Balanced</button>
-  <button data-run="fixedp_open">Overbal. open</button>
-  <button data-run="fixedp_closed">Overbal. closed</button>
   <button data-run="thermal">Cooling + stress</button>
+  <button data-run="over10_open">Losing 10%</button>
+  <button data-run="fixedp_closed">Overbal. closed</button>
+  <button data-run="fivespot">Five-spot</button>
   <div class="lab">Not printed</div>
+  <button data-run="fixedp_open">Fixed P, open</button>
   <button data-run="over_open">Losing 3%</button>
-  <button data-run="under_open">Gaining 3%</button>
+  <button data-run="under_open">Gaining 1%</button>
   <button data-run="over_closed">Losing 3%, closed</button>
   <button id="full">Full screen</button>
 </div>
@@ -74,12 +76,12 @@
     <video id="vid" preload="auto" loop muted playsinline webkit-playsinline crossorigin="anonymous"></video>
   </a-assets>
   <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-  <!-- Target is 1 unit wide (44 in, square poster). The screen covers section 4: x 1.0-29.0 in,
-       y 19.97-35.72 in from the top-left (centre 15.0, 27.85), 28 in wide at 16:9.
-       pos.x = 15.0/44 - 0.5, pos.y = 0.5 - 27.85/44. -->
+  <!-- Target is 1 unit wide (44 in, square poster). The screen covers section 4: x 1.0-27.9 in,
+       y 19.97-35.10 in from the top-left (centre 14.45, 27.535), 26.9 in wide at 16:9, stopping
+       short of the section 5 axes at x 28.1. pos.x = 14.45/44 - 0.5, pos.y = 0.5 - 27.535/44. -->
   <a-entity id="tgt" mindar-image-target="targetIndex: 0">
-    <a-plane color="#000000" position="-0.1591 -0.1330 0.004" width="0.648" height="0.370"></a-plane>
-    <a-video src="#vid" position="-0.1591 -0.1330 0.008" width="0.6364" height="0.3580"></a-video>
+    <a-plane color="#000000" position="-0.1716 -0.1258 0.004" width="0.6205" height="0.3546"></a-plane>
+    <a-video src="#vid" position="-0.1716 -0.1258 0.008" width="0.6114" height="0.3439"></a-video>
   </a-entity>
 </a-scene>
 

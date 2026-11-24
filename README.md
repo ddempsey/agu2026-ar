@@ -5,11 +5,12 @@ movie: 30 years of pressure, temperature and fault loading in 15 seconds. Image 
 MindAR 1.2.5 + A-Frame 1.5.0, served by GitHub Pages at https://ddempsey.github.io/agu2026-ar/
 
 - `index.html`: the AR page. The target is the whole 44 x 44 in poster (1 unit = 44 in); the video
-  plane covers section 4 (see the comment in the scene). Seven clips: the four printed rows
-  (balanced, overbalanced open and closed, cooling + fault loading) and three cases not printed
-  (losing 3%, gaining 3%, losing 3% in a closed compartment). Full screen has a time slider.
-- `poster.mind`: compiled image target, from PowerPoint's own PDF export of the `_qr` pptx at
-  1000 px. Rebuild whenever the poster layout changes:
+  plane covers section 4 (see the comment in the scene). Nine clips: the five printed rows
+  (balanced, cooling + fault loading, losing 10% open, overbalanced closed, five-spot) and four
+  cases not printed (fixed-pressure producer open, losing 3%, gaining 1%, losing 3% in a closed
+  compartment). Full screen has a time slider.
+- `poster.mind`: compiled image target, from PowerPoint's own render of the `_qr_v2` pptx
+  (six-row section 4, Nov 2026) at 1000 px. Rebuild whenever the poster layout changes:
   `node tools/compile_mind.js target.png poster.mind`.
 - `poster.jpg`: the same render, for testing from a laptop screen.
 - `media/*.{mp4,webm}`: 1280x720 clips, 180 log-spaced times from 0.01 to 30 yr at 12 fps plus a
